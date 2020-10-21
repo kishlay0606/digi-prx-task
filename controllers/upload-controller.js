@@ -27,26 +27,15 @@ module.exports = {
         try {
             var maxSize = 20 * 1000 * 1000;
 
-            var storage = multer.diskStorage({
-                destination: function (req, file, callback) {
-
-                    callback(null, __dirname + '/public/uploads');
-                },
-                filename: function (req, file, callback) {
-
-                    callback(null, file.originalname);
-                },
-                onFileUploadStart: function (file, req, res) {
-                    if (req.files.file.length > maxSize) {
-                        return false;
-                    }
-                }
-
-            });
+         
 
             var upload = multer({
-                storage: storage,
-                limits: { fileSize: 20 * 1024 * 1024 }
+                storage: fileupload.file.storage(), 
+                allowedImage:fileupload.file.allowedfile ,
+                limits : {
+                    fileSize: 20 * 1024 * 1024
+                  }
+                
             }).single('file');
 
 

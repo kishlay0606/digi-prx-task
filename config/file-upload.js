@@ -10,6 +10,10 @@ module.exports.file={
           );
       return storage;
 },
+
+
+
+
 allowedfile:function(req, file, cb) {
     // Accept images only
     if (!file.originalname.match(/\.(jpg|JPG|pdf|docx|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
