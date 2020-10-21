@@ -1,9 +1,9 @@
 # Steps for running project- FileBin
 
 1. Initially Download the Project from Github link.
-2. Go to the Project Directory.
+2. Go to the Project Directory and run command "npm i" to install packages.
 3. Then enter "npm start" command in the terminal. It will start the backend server.
-4. Again open another terminal and go the directory "client" .
+4. Again open another terminal and go the directory "client"  and  run command "npm i" to install packages inside client folder. 
 5. Then again run the command "npm start" to start the react app.
 6. After that upload file from local device less than 20MB and click on upload button. It will upload the file.
 7. That file will be saved in the difi-prx-task/controllers/public/uploads.
